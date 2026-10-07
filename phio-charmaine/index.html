@@ -21,6 +21,10 @@ a:focus-visible{outline:3px solid #1F4A33;outline-offset:3px}
 .btn:hover{opacity:.88}
 .gal{display:flex;gap:20px;align-items:stretch}
 @media (max-width:720px){.gal{flex-direction:column}.gal>*{flex:none !important;width:100%}}
+.gal{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));grid-auto-rows:200px;grid-auto-flow:dense;gap:16px}
+.gal>div{overflow:hidden}
+.gal .wide img{object-position:center 35%}
+@media (max-width:900px){.gal{grid-template-columns:repeat(2,minmax(0,1fr));grid-auto-rows:150px;gap:10px}}
 @media (max-width:720px){.hide-sm{display:none !important}}
 @media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
 </style>
@@ -45,6 +49,7 @@ a:focus-visible{outline:3px solid #1F4A33;outline-offset:3px}
 <a class="navlink" href="#video">Save the Date</a>
 <a class="navlink" href="#detalye">Detalye ng Kasal</a>
 <a class="navlink" href="#hilig">Mga Lakbay</a>
+<a class="navlink" href="#alaala">Mga Alaala</a>
 <a class="navlink" href="#larawan">Mga Larawan</a>
 <a class="navlink" href="#entourage">Entourage</a>
 <a class="navlink" href="#dresscode">Dress Code</a>
@@ -82,12 +87,7 @@ a:focus-visible{outline:3px solid #1F4A33;outline-offset:3px}
 </div>
 </div>
 <div style="flex: 2.4 1 520px; display: flex; flex-direction: column; gap: 16px;">
-<div class="ph" style="aspect-ratio: 3 / 2;">
-<svg width="34" height="34" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4" aria-hidden="true"><path d="M3 8h4l2-3h6l2 3h4v11H3z"></path><circle cx="12" cy="13" r="3.5"></circle></svg>
-<b>Photo 1: Main cover photo</b>
-<span>Prenup shot of Phio Josh and Charmaine walking arm in arm through tall grass in hiking gear (the large photo on the invitation front page).</span>
-<i>Landscape 3:2, at least 1800 px wide</i>
-</div>
+<img src="photos/cover-hiking.jpg" alt="Phio Josh at Charmaine, magkaakbay sa gitna ng matataas na damo" loading="lazy" style="display: block; width: 100%; box-sizing: border-box; object-fit: cover; border: 1px solid #2B2117; aspect-ratio: 3 / 2;">
 <blockquote style="margin: 0; border: 1px solid #2B2117; padding: 16px 24px; text-align: center; font-style: italic; font-size: clamp(17px, 1.7vw, 21px);">&ldquo;Hindi mo man makita ang buong daan, basta&rsquo;t kasama mo ako, handa akong lakarin ang lahat.&rdquo;</blockquote>
 </div>
 </div>
@@ -115,12 +115,7 @@ a:focus-visible{outline:3px solid #1F4A33;outline-offset:3px}
 </div>
 <div style="display: flex; flex-wrap: wrap; gap: 24px;">
 <article style="flex: 1 1 320px; border: 1px solid #2B2117; padding: 20px; display: flex; flex-direction: column; gap: 14px;">
-<div class="ph" style="aspect-ratio: 16 / 10;">
-<svg width="30" height="30" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4" aria-hidden="true"><path d="M3 8h4l2-3h6l2 3h4v11H3z"></path><circle cx="12" cy="13" r="3.5"></circle></svg>
-<b>Photo 2: The church</b>
-<span>Facade or interior aisle of Sta. Clara de Montefalco Parish, Pasig. A sepia or warm-toned edit fits the theme.</span>
-<i>Landscape 16:10</i>
-</div>
+<img src="photos/church.jpg" alt="Sta. Clara de Montefalco Parish, Pasig City" loading="lazy" style="display: block; width: 100%; box-sizing: border-box; object-fit: cover; border: 1px solid #2B2117; aspect-ratio: 16 / 10;">
 <div style="display: flex; align-items: baseline; justify-content: space-between; gap: 12px; border-bottom: 1px solid #2B2117; padding-bottom: 6px;">
 <h3 style="margin: 0; font-size: 22px; letter-spacing: .06em; text-transform: uppercase;">Kasal</h3>
 <div style="font-weight: 700; font-size: 22px;">2:00 ng hapon</div>
@@ -132,12 +127,7 @@ a:focus-visible{outline:3px solid #1F4A33;outline-offset:3px}
 </div>
 </article>
 <article style="flex: 1 1 320px; border: 1px solid #2B2117; padding: 20px; display: flex; flex-direction: column; gap: 14px;">
-<div class="ph" style="aspect-ratio: 16 / 10;">
-<svg width="30" height="30" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4" aria-hidden="true"><path d="M3 8h4l2-3h6l2 3h4v11H3z"></path><circle cx="12" cy="13" r="3.5"></circle></svg>
-<b>Photo 3: The reception venue</b>
-<span>Exterior or styled hall of Crystal Joy&rsquo;s Events Place, Cainta. A rustic angle (wood, garden, lights) works best.</span>
-<i>Landscape 16:10</i>
-</div>
+<img src="photos/venue.jpg" alt="Ang bulwagan ng Crystal Joy’s Events Place, Cainta" loading="lazy" style="display: block; width: 100%; box-sizing: border-box; object-fit: cover; border: 1px solid #2B2117; aspect-ratio: 16 / 10;">
 <div style="display: flex; align-items: baseline; justify-content: space-between; gap: 12px; border-bottom: 1px solid #2B2117; padding-bottom: 6px;">
 <h3 style="margin: 0; font-size: 22px; letter-spacing: .06em; text-transform: uppercase;">Reception</h3>
 <div style="font-weight: 700; font-size: 22px;">5:30 ng hapon</div>
@@ -162,60 +152,68 @@ a:focus-visible{outline:3px solid #1F4A33;outline-offset:3px}
 </div>
 <div style="display: flex; flex-wrap: wrap; gap: 20px;">
 <article style="flex: 1 1 210px; display: flex; flex-direction: column; gap: 10px;">
-<div class="ph" style="aspect-ratio: 4 / 5;">
-<svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4" aria-hidden="true"><path d="M3 8h4l2-3h6l2 3h4v11H3z"></path><circle cx="12" cy="13" r="3.5"></circle></svg>
-<b>Photo 4: Travel</b>
-<span>The two of you at a destination: airport, landmark, beach or road-trip shot.</span>
-<i>Portrait 4:5</i>
-</div>
+<img src="photos/hobby-travel.jpg" alt="Phio Josh at Charmaine sa harap ng isang templo sa Taiwan" loading="lazy" style="display: block; width: 100%; box-sizing: border-box; object-fit: cover; border: 1px solid #2B2117; aspect-ratio: 4 / 5;">
 <h3 style="margin: 0; font-size: 22px; border-bottom: 1px solid #2B2117; padding-bottom: 4px;">Travel</h3>
 <p style="margin: 0; font-size: 17px;">Bagong lugar, bagong alaala. Ang pinakamasarap na biyahe ay ang biyaheng magkasama.</p>
 <p style="margin: 0; font-size: 15px; font-style: italic;">[Paboritong destinasyon: ilagay dito]</p>
 </article>
 <article style="flex: 1 1 210px; display: flex; flex-direction: column; gap: 10px;">
-<div class="ph" style="aspect-ratio: 4 / 5;">
-<svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4" aria-hidden="true"><path d="M3 8h4l2-3h6l2 3h4v11H3z"></path><circle cx="12" cy="13" r="3.5"></circle></svg>
-<b>Photo 5: Hiking</b>
-<span>On the trail or at a summit, backpacks on, mountain view behind you.</span>
-<i>Portrait 4:5</i>
-</div>
+<img src="photos/hobby-hiking.jpg" alt="Phio Josh at Charmaine sa tuktok ng bundok, may dalang backpack" loading="lazy" style="display: block; width: 100%; box-sizing: border-box; object-fit: cover; border: 1px solid #2B2117; aspect-ratio: 4 / 5;">
 <h3 style="margin: 0; font-size: 22px; border-bottom: 1px solid #2B2117; padding-bottom: 4px;">Hiking</h3>
 <p style="margin: 0; font-size: 17px;">Matarik man ang daan, magaan ang bawat hakbang kapag magkahawak-kamay.</p>
 <p style="margin: 0; font-size: 15px; font-style: italic;">[Paboritong bundok o trail: ilagay dito]</p>
 </article>
 <article style="flex: 1 1 210px; display: flex; flex-direction: column; gap: 10px;">
-<div class="ph" style="aspect-ratio: 4 / 5;">
-<svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4" aria-hidden="true"><path d="M3 8h4l2-3h6l2 3h4v11H3z"></path><circle cx="12" cy="13" r="3.5"></circle></svg>
-<b>Photo 6: Camping</b>
-<span>Tent, campfire or pine-forest campsite shot (like the camping photo on the invitation).</span>
-<i>Portrait 4:5</i>
-</div>
+<img src="photos/hobby-camping.jpg" alt="Selfie nina Phio Josh at Charmaine habang nagluluto sa campsite" loading="lazy" style="display: block; width: 100%; box-sizing: border-box; object-fit: cover; border: 1px solid #2B2117; aspect-ratio: 4 / 5;">
 <h3 style="margin: 0; font-size: 22px; border-bottom: 1px solid #2B2117; padding-bottom: 4px;">Camping</h3>
 <p style="margin: 0; font-size: 17px;">Tolda, apoy, at langit na puno ng bituin. Dito kami pinakapayapa.</p>
 <p style="margin: 0; font-size: 15px; font-style: italic;">[Paboritong campsite: ilagay dito]</p>
 </article>
 <article style="flex: 1 1 210px; display: flex; flex-direction: column; gap: 10px;">
-<div class="ph" style="aspect-ratio: 4 / 5;">
-<svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4" aria-hidden="true"><path d="M3 8h4l2-3h6l2 3h4v11H3z"></path><circle cx="12" cy="13" r="3.5"></circle></svg>
-<b>Photo 7: Exploration</b>
-<span>Somewhere off the beaten path: a waterfall, cave, old town street or hidden viewpoint.</span>
-<i>Portrait 4:5</i>
-</div>
+<img src="photos/hobby-exploration.jpg" alt="Phio Josh at Charmaine na naka-helmet sa loob ng kuweba" loading="lazy" style="display: block; width: 100%; box-sizing: border-box; object-fit: cover; border: 1px solid #2B2117; aspect-ratio: 4 / 5;">
 <h3 style="margin: 0; font-size: 22px; border-bottom: 1px solid #2B2117; padding-bottom: 4px;">Exploration</h3>
 <p style="margin: 0; font-size: 17px;">Mga daang wala sa mapa, mga tanawing hindi inaasahan. Doon kami pumupunta.</p>
 <p style="margin: 0; font-size: 15px; font-style: italic;">[Pinakatagong lugar na natuklasan: ilagay dito]</p>
 </article>
 <article style="flex: 1 1 210px; display: flex; flex-direction: column; gap: 10px;">
-<div class="ph" style="aspect-ratio: 4 / 5;">
-<svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4" aria-hidden="true"><path d="M3 8h4l2-3h6l2 3h4v11H3z"></path><circle cx="12" cy="13" r="3.5"></circle></svg>
-<b>Photo 8: Food trip</b>
-<span>Sharing a meal: street food, a carinderia table, or a local specialty you travelled for.</span>
-<i>Portrait 4:5</i>
-</div>
+<img src="photos/hobby-foodtrip.jpg" alt="Phio Josh at Charmaine sa harap ng hapag na puno ng pagkain" loading="lazy" style="display: block; width: 100%; box-sizing: border-box; object-fit: cover; border: 1px solid #2B2117; aspect-ratio: 4 / 5;">
 <h3 style="margin: 0; font-size: 22px; border-bottom: 1px solid #2B2117; padding-bottom: 4px;">Food Trip</h3>
 <p style="margin: 0; font-size: 17px;">Mula karinderya hanggang kainang dinarayo, walang biyaheng kumpleto nang walang kainan.</p>
 <p style="margin: 0; font-size: 15px; font-style: italic;">[Paboritong kainan o pagkain: ilagay dito]</p>
 </article>
+</div>
+</section>
+
+<section id="alaala" style="display: flex; flex-direction: column; gap: 28px; border-top: 4px double #2B2117; padding-top: clamp(28px, 4vw, 48px);">
+<div style="text-align: center;">
+<h2 style="margin: 0; font-size: clamp(28px, 4vw, 46px); letter-spacing: .05em; text-transform: uppercase; line-height: 1.1;">Mga Alaala sa Paglalakbay</h2>
+<div style="font-family: 'Pinyon Script', cursive; font-size: clamp(26px, 3vw, 36px); line-height: 1.3;">mula sa aming mga biyahe, akyat at pagtuklas</div>
+</div>
+<div class="gal">
+<div style="grid-row: span 2; min-width: 0;"><img src="photos/travel-sailboat.jpg" alt="Sakay ng paraw habang papalubog ang araw" loading="lazy" style="display: block; width: 100%; box-sizing: border-box; object-fit: cover; border: 1px solid #2B2117; height: 100%;"></div>
+<div style="grid-column: span 2; min-width: 0;"><img src="photos/travel-summit-sign.jpg" alt="Sa tuktok ng bundok, hawak ang karatula" loading="lazy" style="display: block; width: 100%; box-sizing: border-box; object-fit: cover; border: 1px solid #2B2117; height: 100%;"></div>
+<div style="grid-row: span 2; min-width: 0;"><img src="photos/travel-kinabalu.jpg" alt="Sa harap ng Mount Kinabalu" loading="lazy" style="display: block; width: 100%; box-sizing: border-box; object-fit: cover; border: 1px solid #2B2117; height: 100%;"></div>
+<div style="grid-column: span 2; min-width: 0;"><img src="photos/travel-eiffel.jpg" alt="Sa harap ng Eiffel Tower" loading="lazy" style="display: block; width: 100%; box-sizing: border-box; object-fit: cover; border: 1px solid #2B2117; height: 100%;"></div>
+<div style="grid-row: span 2; min-width: 0;"><img src="photos/travel-pinatubo.jpg" alt="Sa crater lake ng Pinatubo" loading="lazy" style="display: block; width: 100%; box-sizing: border-box; object-fit: cover; border: 1px solid #2B2117; height: 100%;"></div>
+<div style="grid-row: span 2; min-width: 0;"><img src="photos/travel-island-view.jpg" alt="Tanaw ang isla mula sa viewdeck" loading="lazy" style="display: block; width: 100%; box-sizing: border-box; object-fit: cover; border: 1px solid #2B2117; height: 100%;"></div>
+<div style="grid-column: span 2; min-width: 0;"><img src="photos/travel-cave.jpg" alt="Sa loob ng kuweba" loading="lazy" style="display: block; width: 100%; box-sizing: border-box; object-fit: cover; border: 1px solid #2B2117; height: 100%;"></div>
+<div style="grid-row: span 2; min-width: 0;"><img src="photos/travel-jiufen.jpg" alt="Naglalakad sa lumang kalye" loading="lazy" style="display: block; width: 100%; box-sizing: border-box; object-fit: cover; border: 1px solid #2B2117; height: 100%;"></div>
+<div style="grid-row: span 2; min-width: 0;"><img src="photos/travel-waterfall.jpg" alt="Sa paanan ng talon" loading="lazy" style="display: block; width: 100%; box-sizing: border-box; object-fit: cover; border: 1px solid #2B2117; height: 100%;"></div>
+<div style="grid-column: span 2; min-width: 0;"><img src="photos/travel-ridge.jpg" alt="Sa gilid ng bundok, tanaw ang mga kabundukan" loading="lazy" style="display: block; width: 100%; box-sizing: border-box; object-fit: cover; border: 1px solid #2B2117; height: 100%;"></div>
+<div style="grid-row: span 2; min-width: 0;"><img src="photos/travel-boracay.jpg" alt="Sa puting buhangin ng dalampasigan" loading="lazy" style="display: block; width: 100%; box-sizing: border-box; object-fit: cover; border: 1px solid #2B2117; height: 100%;"></div>
+<div style="grid-column: span 2; min-width: 0;"><img src="photos/travel-museum.jpg" alt="Selfie sa museo" loading="lazy" style="display: block; width: 100%; box-sizing: border-box; object-fit: cover; border: 1px solid #2B2117; height: 100%;"></div>
+<div style="grid-column: span 2; min-width: 0;"><img src="photos/travel-floating-market.jpg" alt="Kumakain sa floating market" loading="lazy" style="display: block; width: 100%; box-sizing: border-box; object-fit: cover; border: 1px solid #2B2117; height: 100%;"></div>
+<div style="grid-row: span 2; min-width: 0;"><img src="photos/travel-beach-sunset.jpg" alt="Sa dalampasigan habang papalubog ang araw" loading="lazy" style="display: block; width: 100%; box-sizing: border-box; object-fit: cover; border: 1px solid #2B2117; height: 100%;"></div>
+<div style="grid-row: span 2; min-width: 0;"><img src="photos/travel-railway.jpg" alt="Sa lumang riles" loading="lazy" style="display: block; width: 100%; box-sizing: border-box; object-fit: cover; border: 1px solid #2B2117; height: 100%;"></div>
+<div style="grid-row: span 2; min-width: 0;"><img src="photos/travel-strawberry-farm.jpg" alt="Namimitas ng strawberry" loading="lazy" style="display: block; width: 100%; box-sizing: border-box; object-fit: cover; border: 1px solid #2B2117; height: 100%;"></div>
+<div style="grid-column: span 2; min-width: 0;"><img src="photos/travel-theme-park.jpg" alt="Selfie sa theme park" loading="lazy" style="display: block; width: 100%; box-sizing: border-box; object-fit: cover; border: 1px solid #2B2117; height: 100%;"></div>
+<div style="grid-row: span 2; min-width: 0;"><img src="photos/travel-summit-selfie.jpg" alt="Selfie sa tuktok ng bundok" loading="lazy" style="display: block; width: 100%; box-sizing: border-box; object-fit: cover; border: 1px solid #2B2117; height: 100%;"></div>
+<div style="grid-row: span 2; min-width: 0;"><img src="photos/travel-waterfall-pool.jpg" alt="Sa tabi ng talon" loading="lazy" style="display: block; width: 100%; box-sizing: border-box; object-fit: cover; border: 1px solid #2B2117; height: 100%;"></div>
+<div style="grid-column: span 2; min-width: 0;"><img src="photos/travel-moss-forest.jpg" alt="Sa mossy forest" loading="lazy" style="display: block; width: 100%; box-sizing: border-box; object-fit: cover; border: 1px solid #2B2117; height: 100%;"></div>
+<div style="grid-row: span 2; min-width: 0;"><img src="photos/travel-ivy-wall.jpg" alt="Sa harap ng pader na may baging" loading="lazy" style="display: block; width: 100%; box-sizing: border-box; object-fit: cover; border: 1px solid #2B2117; height: 100%;"></div>
+<div style="grid-row: span 2; min-width: 0;"><img src="photos/travel-sunset-silhouette.jpg" alt="Magkasamang pinapanood ang paglubog ng araw" loading="lazy" style="display: block; width: 100%; box-sizing: border-box; object-fit: cover; border: 1px solid #2B2117; height: 100%;"></div>
+<div style="grid-row: span 2; min-width: 0;"><img src="photos/travel-food-platter.jpg" alt="Food trip: platter para sa dalawa" loading="lazy" style="display: block; width: 100%; box-sizing: border-box; object-fit: cover; border: 1px solid #2B2117; height: 100%;"></div>
+<div style="grid-row: span 2; min-width: 0;"><img src="photos/travel-lockers.jpg" alt="Sa harap ng mga locker" loading="lazy" style="display: block; width: 100%; box-sizing: border-box; object-fit: cover; border: 1px solid #2B2117; height: 100%;"></div>
 </div>
 </section>
 
@@ -224,25 +222,14 @@ a:focus-visible{outline:3px solid #1F4A33;outline-offset:3px}
 <h2 style="margin: 0; font-size: clamp(28px, 4vw, 46px); letter-spacing: .05em; text-transform: uppercase; line-height: 1.1;">Mga Larawan</h2>
 <div style="font-family: 'Pinyon Script', cursive; font-size: clamp(26px, 3vw, 36px); line-height: 1.3;">mula sa aming prenup</div>
 </div>
-<div style="display: flex; flex-wrap: wrap; gap: 20px;">
-<div class="ph" style="flex: 1 1 280px; aspect-ratio: 4 / 5;">
-<svg width="30" height="30" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4" aria-hidden="true"><path d="M3 8h4l2-3h6l2 3h4v11H3z"></path><circle cx="12" cy="13" r="3.5"></circle></svg>
-<b>Photo 9: Filipiniana portrait</b>
-<span>The barong and white Filipiniana shot on the wooden bridge (from the invitation).</span>
-<i>Portrait 4:5</i>
-</div>
-<div class="ph" style="flex: 1 1 280px; aspect-ratio: 4 / 5;">
-<svg width="30" height="30" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4" aria-hidden="true"><path d="M3 8h4l2-3h6l2 3h4v11H3z"></path><circle cx="12" cy="13" r="3.5"></circle></svg>
-<b>Photo 10: Campsite portrait</b>
-<span>The pine-forest shot beside the tent with sunlight behind you (from the invitation).</span>
-<i>Portrait 4:5</i>
-</div>
-<div class="ph" style="flex: 1 1 280px; aspect-ratio: 4 / 5;">
-<svg width="30" height="30" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4" aria-hidden="true"><path d="M3 8h4l2-3h6l2 3h4v11H3z"></path><circle cx="12" cy="13" r="3.5"></circle></svg>
-<b>Photo 11: Candid</b>
-<span>A laughing, unposed close-up of the two of you. Any favourite prenup frame not used above.</span>
-<i>Portrait 4:5</i>
-</div>
+<div class="gal">
+<div style="grid-row: span 2; min-width: 0;"><img src="photos/prenup-filipiniana-pines.jpg" alt="Phio Josh at Charmaine sa gitna ng mga pino, naka-barong at Filipiniana" loading="lazy" style="display: block; width: 100%; box-sizing: border-box; object-fit: cover; border: 1px solid #2B2117; height: 100%;"></div>
+<div style="grid-column: span 2; min-width: 0;"><img src="photos/prenup-bridge.jpg" alt="Phio Josh at Charmaine sa kahoy na tulay" loading="lazy" style="display: block; width: 100%; box-sizing: border-box; object-fit: cover; border: 1px solid #2B2117; height: 100%;"></div>
+<div style="grid-column: span 2; min-width: 0;"><img src="photos/prenup-silhouette.jpg" alt="Anino nina Phio Josh at Charmaine sa ilalim ng puno habang papalubog ang araw" loading="lazy" style="display: block; width: 100%; box-sizing: border-box; object-fit: cover; border: 1px solid #2B2117; height: 100%;"></div>
+<div style="grid-row: span 2; min-width: 0;"><img src="photos/prenup-filipiniana-embrace.jpg" alt="Magkayakap sina Phio Josh at Charmaine sa Filipiniana" loading="lazy" style="display: block; width: 100%; box-sizing: border-box; object-fit: cover; border: 1px solid #2B2117; height: 100%;"></div>
+<div style="grid-column: span 2; min-width: 0;"><img src="photos/prenup-campsite.jpg" alt="Phio Josh at Charmaine sa tabi ng tolda sa gitna ng mga pino" loading="lazy" style="display: block; width: 100%; box-sizing: border-box; object-fit: cover; border: 1px solid #2B2117; height: 100%;"></div>
+<div style="grid-column: span 2; min-width: 0;"><img src="photos/prenup-forest-walk.jpg" alt="Phio Josh at Charmaine naglalakad sa kagubatan ng pino" loading="lazy" style="display: block; width: 100%; box-sizing: border-box; object-fit: cover; border: 1px solid #2B2117; height: 100%;"></div>
+<div class="wide" style="grid-column: 1 / -1; grid-row: span 2; min-width: 0;"><img src="photos/prenup-campfire.jpg" alt="Phio Josh at Charmaine na may hawak na tasa sa tabi ng campfire" loading="lazy" style="display: block; width: 100%; box-sizing: border-box; object-fit: cover; border: 1px solid #2B2117; height: 100%;"></div>
 </div>
 </section>
 
@@ -271,11 +258,11 @@ a:focus-visible{outline:3px solid #1F4A33;outline-offset:3px}
 <div style="flex: 1 1 240px;">
 <div style="font-family: 'Pinyon Script', cursive; font-size: 34px; line-height: 1.3;">Ninong</div>
 <div>Rhy Villaruz</div>
-<div>Engr. Andy Domingo</div>
-<div>Paul Garcia</div>
+<div>Engr. Andres Domingo</div>
+<div>Simplicio Garcia</div>
 <div>Edison Oribiana</div>
 <div>Greg Melendres</div>
-<div>Ric Tiozon</div>
+<div>Ricardo Tiozon</div>
 <div>Edward King</div>
 <div>RJ Ganancial</div>
 <div>Leconte Clores</div>
@@ -291,10 +278,10 @@ a:focus-visible{outline:3px solid #1F4A33;outline-offset:3px}
 <div>Teresa Duzon</div>
 <div>Julieta Cruz</div>
 <div>Mina Quizon</div>
-<div>Dra. Gigi</div>
+<div>Dra. Gegie Caduan</div>
 <div>Adele Ruth Ganancial</div>
-<div>Cathy Espinosa</div>
-<div>Liza Linnson</div>
+<div>Judy Machida</div>
+<div>Flordeliza Shimizu</div>
 <div>Laniza Nocom</div>
 <div>Geraldine Melendres</div>
 </div>
@@ -309,7 +296,7 @@ a:focus-visible{outline:3px solid #1F4A33;outline-offset:3px}
 <div>Jomarie Longakit</div>
 <div>Chelsea Aguirre</div>
 <div>Charina Gamboa</div>
-<div>Mary Sol Longakit</div>
+<div>Eusha Ataran</div>
 </div>
 </div>
 
@@ -322,7 +309,7 @@ a:focus-visible{outline:3px solid #1F4A33;outline-offset:3px}
 </div>
 <div style="flex: 1 1 240px;">
 <h4 style="margin: 0 0 4px; font-size: 18px; letter-spacing: .08em; text-transform: uppercase;">Maid of Honor</h4>
-<div>Regine Nicolas</div>
+<div>Marysol Longakit</div>
 </div>
 </div>
 <div style="display: flex; flex-wrap: wrap; gap: 24px; border-top: 1px solid #2B2117; padding-top: 18px;">
@@ -339,8 +326,8 @@ a:focus-visible{outline:3px solid #1F4A33;outline-offset:3px}
 <div style="flex: 1 1 240px;">
 <h4 style="margin: 0 0 4px; font-size: 18px; letter-spacing: .08em; text-transform: uppercase;">Bridesmaids</h4>
 <div>Jhayme Lacson</div>
+<div>Michaella Joy Casiguran</div>
 <div>Pong Lim</div>
-<div>Eusha Ataran</div>
 <div>Kathleen Borer</div>
 <div>Steph Kokobu</div>
 <div>Mariana Lopez</div>
@@ -395,22 +382,12 @@ a:focus-visible{outline:3px solid #1F4A33;outline-offset:3px}
 <article style="flex: 1 1 320px; display: flex; flex-direction: column; gap: 10px;">
 <h3 style="margin: 0; font-size: 22px; letter-spacing: .08em; text-transform: uppercase; text-align: center;">Babae</h3>
 <p style="margin: 0; text-align: center;">Maaaring mag-dress na ayon sa tema.</p>
-<div class="ph" style="aspect-ratio: 2 / 1;">
-<svg width="30" height="30" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4" aria-hidden="true"><path d="M3 8h4l2-3h6l2 3h4v11H3z"></path><circle cx="12" cy="13" r="3.5"></circle></svg>
-<b>Photo 12: Women&rsquo;s attire guide</b>
-<span>The row of six Filipiniana-inspired dresses in the palette colors, cropped from the invitation&rsquo;s dress code page.</span>
-<i>Wide 2:1</i>
-</div>
+<img src="photos/attire-women.jpg" alt="Anim na dress sa mga kulay ng tema: mustard, sage, forest green, plum, dusty mauve at navy" loading="lazy" style="display: block; width: 100%; box-sizing: border-box; object-fit: cover; border: 1px solid #2B2117; aspect-ratio: 1116 / 465;">
 </article>
 <article style="flex: 1 1 320px; display: flex; flex-direction: column; gap: 10px;">
 <h3 style="margin: 0; font-size: 22px; letter-spacing: .08em; text-transform: uppercase; text-align: center;">Lalaki</h3>
 <p style="margin: 0; text-align: center;">Maaaring magsuot ng barong, polo, long sleeves, o linen na ayon sa tema.</p>
-<div class="ph" style="aspect-ratio: 2 / 1;">
-<svg width="30" height="30" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4" aria-hidden="true"><path d="M3 8h4l2-3h6l2 3h4v11H3z"></path><circle cx="12" cy="13" r="3.5"></circle></svg>
-<b>Photo 13: Men&rsquo;s attire guide</b>
-<span>The row of five barong, polo and linen looks, cropped from the invitation&rsquo;s dress code page.</span>
-<i>Wide 2:1</i>
-</div>
+<img src="photos/attire-men.jpg" alt="Limang kasuotang panlalaki: barong, polo at linen sa mga kulay ng tema" loading="lazy" style="display: block; width: 100%; box-sizing: border-box; object-fit: cover; border: 1px solid #2B2117; aspect-ratio: 1104 / 465;">
 </article>
 </div>
 
@@ -432,9 +409,9 @@ a:focus-visible{outline:3px solid #1F4A33;outline-offset:3px}
 <p style="margin: 0;">Ang nakareserbang upuan ay para sa iyo. Para sa mga katanungan at pagkumpirma ng iyong pagdalo, maaaring kontakin sina Phio at Charmaine isang linggo bago ang kasal.</p>
 <div style="font-weight: 700; font-size: 20px;">Kumpirmahin bago Nobyembre 21, 2026</div>
 <div style="display: flex; flex-wrap: wrap; justify-content: center; gap: 10px;">
-<a class="btn" href="tel:" style="background: #1F4A33; color: #F1E6CF; border: 1px solid #1F4A33;">Tawagan si Phio: [NUMERO]</a>
-<a class="btn" href="tel:" style="background: #1F4A33; color: #F1E6CF; border: 1px solid #1F4A33;">Tawagan si Charmaine: [NUMERO]</a>
-<a class="btn" href="#rsvp" style="border: 1px solid #2B2117; color: #2B2117;">Mensahe sa Messenger: [LINK]</a>
+<a class="btn" href="tel:+639176333265" style="background: #1F4A33; color: #F1E6CF; border: 1px solid #1F4A33;">Tawagan si Phio: 0917 633 3265</a>
+<a class="btn" href="tel:+639171029281" style="background: #1F4A33; color: #F1E6CF; border: 1px solid #1F4A33;">Tawagan si Charmaine: 0917 102 9281</a>
+<a class="btn" href="https://www.facebook.com/share/1CHHCaGmaM/?mibextid=wwXIfr" target="_blank" rel="noopener" style="border: 1px solid #2B2117; color: #2B2117;">Mag-mensahe sa Messenger</a>
 </div>
 </article>
 <article style="flex: 1 1 340px; border: 1px solid #2B2117; padding: clamp(20px, 3vw, 36px); display: flex; flex-direction: column; gap: 14px; text-align: center; align-items: center;">
@@ -445,10 +422,7 @@ a:focus-visible{outline:3px solid #1F4A33;outline-offset:3px}
 </section>
 
 <footer style="border-top: 4px double #2B2117; padding-top: clamp(28px, 4vw, 48px); display: flex; flex-direction: column; align-items: center; gap: 16px; text-align: center;">
-<div class="ph" style="width: 150px; height: 150px; border-radius: 50%; padding: 14px; font-size: 12px; gap: 2px;">
-<b style="font-size: 13px;">Photo 14: Monogram</b>
-<span>PC crest from the invitation cover, transparent PNG</span>
-</div>
+<img src="photos/monogram.png" alt="Monogram nina Phio Josh at Charmaine, PC, Nobyembre 28, 2026" style="display: block; width: 260px; max-width: 70%; height: auto;">
 <p style="margin: 0; max-width: 56ch; font-style: italic; font-size: clamp(18px, 2vw, 22px);">Sa araw ng aming kasal, kami ay nagpapasalamat sa inyong pagmamahal, suporta at panalangin.</p>
 <div style="font-weight: 700; letter-spacing: .1em; font-size: 20px;">MARAMING SALAMAT PO!</div>
 <div style="font-family: 'Pinyon Script', cursive; font-size: clamp(34px, 4.4vw, 54px); line-height: 1.2;">Phio Josh &amp; Charmaine</div>
